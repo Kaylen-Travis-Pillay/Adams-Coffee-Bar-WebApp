@@ -1,0 +1,22 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="ProfileMaster.master.vb" Inherits="ProfileMaster" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9" style="background:#D3D3D3;">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <div class="col-md-2" style="background:#D3D3D3; margin-right:auto; margin-left:8%; text-align:center" data-spy="affix" data-offset-top="100">
+                    <asp:LinkButton ID="LinkButton1" runat="server">My Profile</asp:LinkButton>
+                    <br />
+                    <br />
+                    <asp:LinkButton ID="LinkButton2" runat="server">My Order History</asp:LinkButton>
+                </div>
+            </div>
+        </div>
+    </div>
+</asp:Content>
+

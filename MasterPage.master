@@ -1,0 +1,66 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" AutoEventWireup="false" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Adams Coffee Bar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="styles/style.css" type="text/css" />
+    <script src="https://use.fontawesome.com/b45cb13a75.js"></script>
+    <asp:ContentPlaceHolder id="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-image:url(https://i.pinimg.com/originals/bd/af/76/bdaf7600ad567b8251d9951c5e397420.jpg)">
+    <form runat="server">
+        <div class= "container">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header"><a class="navbar-brand navbar-link" href="Default.aspx">Adams <i class="fa fa-coffee fa-lg" aria-hidden="true"></i>  Bar</a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li role="presentation"><a href="Store.aspx"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Store </a></li>
+                    <li role="presentation"><a href="Reviews.aspx"><i class="fa fa-comment" aria-hidden="true"></i> Coffee Squad Blogs</a></li>
+                    <li role="presentation"><a href="ContactUs.aspx"><i class="fa fa-address-book-o" aria-hidden="true"></i> Contact Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li role="presentation"><asp:LinkButton ID="btn_LogginStatus" runat="server">Not Signed In!</asp:LinkButton></li>
+                    <li role="presentation"><asp:LinkButton ID="btn_SignIn" runat="server">Sign In</asp:LinkButton></li>
+                    <li role="presentation"><asp:LinkButton ID="btn_ManagerPortal" runat="server">Portal</asp:LinkButton></li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    <div class="footer">
+        <hr />
+        <p>Adams Coffee Bar by Neurosolutions</p>
+    </div>
+    </div>
+
+
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.3/sweetalert2.all.min.js"></script>
+    <!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+    window.__lc = window.__lc || {};
+    window.__lc.license = 9172245;
+    (function () {
+        var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+        lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+    })();
+</script>
+<!-- End of LiveChat code -->
+</body>
+</html>
